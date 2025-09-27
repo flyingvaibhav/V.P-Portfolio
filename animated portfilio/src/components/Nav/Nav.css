@@ -1,0 +1,35 @@
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    position: fixed;
+    top: 0;
+    
+    
+}
+.active{
+    color: rgb(249, 38, 38) ;
+    border-bottom: 2px solid white
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    list-style: none;
+    font-size: 20px;
+
+}
+nav h1{
+    font-size: 30px;
+   
+    background-clip: text;
+ 
+ background: linear-gradient(to right, rgb(251, 6, 6),white);
+ background-clip: text;
+ color: transparent;
+}
