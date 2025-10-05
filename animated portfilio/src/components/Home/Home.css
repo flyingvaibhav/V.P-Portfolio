@@ -17,13 +17,17 @@
     display: flex;
     justify-content: center;
     align-items: center
+
 }
 .righthome img{
     width: 80%;
+
+    padding-top: 15px;
    filter: drop-shadow(2px 2px 20px red);
 }
 .homedetails{
     font-size: 2vmax;
+    margin-left: 10px;
 }
 .line1{
     font-size: 0.8em;
@@ -66,7 +70,8 @@
     }
     .righthome{
         width: 100%;
-        height: 50vh;
+        height: 50%;
+        padding-top: 25px;
         align-items: end;
     }
 

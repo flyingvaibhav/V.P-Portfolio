@@ -3,7 +3,52 @@ import './About.css'
 
 function About() {
   return (
-    <div id='about'>About</div>
+    <div id='about'>
+
+      <div className="leftabout">
+        <div className="circle-line">
+          <div className="circle"></div>
+          <div className="line"></div>
+          <div className="circle"></div>
+          <div className="line"></div>
+          <div className="circle"></div>
+        </div>
+        <div className="aboutdetail">
+          <div className="personalinfo">
+            <h1>Personal Information</h1>
+            <ul>
+              <li><span>NAME:</span> VAIBHAV PANDEY</li>
+              <li><span>AGE:</span> 20</li>
+              <li><span>GENDER:</span> MALE</li>
+              <li><span>NATIONALITY:</span> INDIAN</li>
+              <li><span>LANGUAGES:</span> HINDI, ENGLISH</li>
+            </ul>
+          </div>
+           <div className="EDUCATION">
+            <h1>EDUCATION</h1>
+            <ul>
+              <li><span>DEGREE:</span> BACHELOR OF TECHNOLOGY</li>
+              <li><span>BRANCH:</span> COMPUTER SCIENCE & ENGINEERING</li>
+              <li><span>COLLEGE:</span> PRANVEER SINGH INSTITUTE OF TECHNOLOGY</li>
+              <li><span>YEAR OF PASSING:</span> 2027</li>
+            </ul>
+          </div>
+          <div className="SKILLS">
+            <h1>SKILLS</h1>
+            <ul>
+              <li><span> LANGUAGES:</span>C++,PYTHON,JAVASCRIPT,JAVA</li>
+              <li><span>FRAMEWORKS:</span>REACT, NODEJS, EXPRESS</li>
+              <li><span>DSA:</span> DATA STRUCTURES &  ALGORITHMS</li>
+              <li><span>OTHER SKILLS:</span> GIT, SQL,POSTMAN,GITHUB</li>
+              <li><span>CORE SKILLS:</span> DBMS, OS,AND NETWORKING</li>
+             
+            </ul>
+          </div>  
+        </div>
+      </div>
+
+      <div className="rightabout"></div>
+    </div>
   )
 }
 

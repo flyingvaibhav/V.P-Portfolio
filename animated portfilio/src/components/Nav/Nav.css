@@ -8,6 +8,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 20;
+    background-color: rgb(28, 27, 27);
     
 }
  nav ul a{
@@ -22,7 +23,7 @@ nav ul a:hover {
     color: rgb(249, 38, 38) ;
     border-bottom: 2px solid white;
 }
-ul{
+nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
