@@ -1,5 +1,9 @@
 import React from 'react'
 import './About.css'
+import Card from '../Card/Card'
+import mern2 from '../../assets/MERN.png'
+import python from '../../assets/PYTHON.png'
+import dsa from '../../assets/DSA.png'
 
 function About() {
   return (
@@ -15,7 +19,7 @@ function About() {
         </div>
         <div className="aboutdetail">
           <div className="personalinfo">
-            <h1>Personal Information</h1>
+            <h1>PERSONAL INFORMATION</h1>
             <ul>
               <li><span>NAME:</span> VAIBHAV PANDEY</li>
               <li><span>AGE:</span> 20</li>
@@ -47,7 +51,11 @@ function About() {
         </div>
       </div>
 
-      <div className="rightabout"></div>
+      <div className="rightabout">
+        <Card title={"MERN STACK DEVELOPER"} image={mern2} />
+        <Card title={"PYTHON "} image={python} />
+        <Card title={"DATA STRUCTURE "} image={dsa} />
+      </div>
     </div>
   )
 }
