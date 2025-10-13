@@ -1,51 +1,180 @@
-.card{
-  max-width: 400px;
-  width: 90%;
-  height: 177px;
+.card {
+  width: 100%;
+  max-width: 380px;
+  height: 220px;
   background-color: rgba(27, 27, 28, 0.967);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px black, 2px 20px 20px black;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  box-shadow: 2px 2px 10px black, 2px 20px 20px black;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 10px rgb(119, 249, 249), 2px 2px 20px rgb(251, 7, 7);
+}
+
+/* ---------- ABOUT SECTION (OLD HOVER IMAGE) ---------- */
+.about-card .hovercard {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top right, rgb(118, 222, 243), rgb(245, 143, 143));
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: all 0.75s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+}
+
+.about-card .hovercard img {
+  height: 80%;
+  filter: drop-shadow(2px 2px 10px black);
+}
+
+.about-card:hover .hovercard {
+  transform: translateY(0);
+}
+
+.card h1 {
+  background: linear-gradient(to right, rgb(156, 245, 252), white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.6rem;
+  
+}
+
+/* ---------- PROJECT SECTION (FLIP CARD) ---------- */
+.project-card {
+  perspective: 1000px;
+}
+
+.project-card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.project-card .card-front,
+.project-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
-  transition: all 0.3s ;
-  cursor: pointer;
-  flex-shrink: 0;
-
+  backface-visibility: hidden;     
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15px;
 }
-.card:hover{
-    box-shadow: 2px 2px 10px rgb(6, 251, 251), 2px 2px 20px rgb(251, 7, 7);
+
+.project-card .card-front {
+  background-color: rgba(27, 27, 28, 0.967);
 }
 
-.hovercard img{
-    height: 80%;
-    filter: drop-shadow(2px,2px,10px black);
-
+.project-card .card-back {
+  background: linear-gradient(to top right, rgba(59, 206, 235, 0.69), rgb(242, 94, 94));
+  transform: rotateY(180deg);
+  color: #111;
+  justify-content: space-between;
 }
-.hovercard{
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top right, rgba(59, 206, 235, 0.69), rgb(232, 178, 178));
-    position: absolute;
-    bottom: 0;
-    transform: translateY(100%);
-    transition: all 0.75s ease ;
-    display: flex ;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(3px);
 
+/* ---------- DESCRIPTION ---------- */
+.card-desc {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 15px;
+  flex-grow: 1;
 }
-.card:hover .hovercard{
-    transform: translateY(0);
-}
-.card h1{
-     background: linear-gradient(to right, rgb(4, 228, 244),white);
- background-clip: text;
- color: transparent;
- font-size: 30px;
 
+/* ---------- BUTTONS ---------- */
+.card-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.live-btn {
+  background-color: rgb(110, 241, 66);
+  color: black;
+}
+
+.github-btn {
+  background-color: black;
+  color: white;
+}
+
+.live-btn:hover {
+  background-color: rgb(31, 250, 239);
+  color: black;
+  box-shadow: 4px 4px 8px rgb(4, 228, 244);
+}
+
+.github-btn:hover {
+  background-color: rgb(30, 30, 30);
+  box-shadow: 3px 3px 8px white;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .card {
+    height: 200px;
+    max-width: 320px;
+  }
+  .card h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: 180px;
+    max-width: 280px;
+  }
+  .card h1 {
+    font-size: 1.2rem;
+  }
+  .card-desc {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Touch (Mobile Tap to Flip) */
+@media (hover: none) {
+  .project-card .card-inner {
+    transform: none;
+  }
+  .project-card:active .card-inner {
+    transform: rotateY(180deg);
+  }
 }

@@ -4,8 +4,27 @@ import Card from '../Card/Card'
 import mern2 from '../../assets/MERN.png'
 import python from '../../assets/PYTHON.png'
 import dsa from '../../assets/DSA.png'
-
+import { useGSAP } from '@gsap/react'
+import { gsap } from 'gsap'
+  import { ScrollTrigger } from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
 function About() {
+ useGSAP(()=>{
+  gsap.from(".circle",{
+    x: -100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.3,
+    scrollTrigger:{
+      trigger:".circle",
+      scroll:'body',
+      scrub:2,
+      markers:true,
+      start:'top 80%',
+
+ }})
+  })
+
   return (
     <div id='about'>
 
@@ -52,9 +71,10 @@ function About() {
       </div>
 
       <div className="rightabout">
-        <Card title={"MERN STACK DEVELOPER"} image={mern2} />
-        <Card title={"PYTHON "} image={python} />
-        <Card title={"DATA STRUCTURE "} image={dsa} />
+       <Card title={"MERN STACK DEVELOPER"} image={mern2} variant="about" />
+<Card title={"PYTHON"} image={python} variant="about" />
+<Card title={"DATA STRUCTURE"} image={dsa} variant="about" />
+
       </div>
     </div>
   )
