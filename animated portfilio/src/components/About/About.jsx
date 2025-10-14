@@ -19,10 +19,65 @@ function About() {
       trigger:".circle",
       scroll:'body',
       scrub:2,
-      markers:true,
-      start:'top 80%',
+      start:'top 50%',
+      end:'top 30%' 
+
+ }
+}
+)
+gsap.from(".line",{
+    x: -100,
+    duration: 1,
+    opacity: 0,
+    stagger: 1,
+    scrollTrigger:{
+      trigger:".line",
+      scroll:'body',
+      scrub:2,
+      start:'top 60%',
+      end:'top 30%' 
 
  }})
+gsap.from(".aboutdetail h1",{
+    x: -100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.3,
+    scrollTrigger:{
+      trigger:".aboutdetail h1",
+      scroll:'body',
+      scrub:2,
+      start:'top 50%',
+      end:'top 30%' 
+
+ }})
+ gsap.from(".aboutdetail ul",{
+    x : 100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.3,
+    scrollTrigger:{
+      trigger:".aboutdetail ul",
+      scroll:'body',
+      scrub:2,
+      start:'top 50%',
+      end:'top 30%' 
+
+ }})
+ gsap.from(".rightabout",{
+    x: 100,
+    duration: 1,
+    opacity: 0,
+    stagger: 1,
+    scrollTrigger:{
+      trigger:".rightabout",
+      scroll:'body',
+      scrub:2,
+      start:'top 60%',
+      end:'top 30%' 
+
+ }})
+
   })
 
   return (

@@ -1,11 +1,30 @@
 import React from 'react'
 import Card from '../Card/Card'
 import './Projects.css'
+import { useGSAP } from '@gsap/react'
+import { gsap } from 'gsap'
+  import { ScrollTrigger } from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
 
 function Projects() {
+  useGSAP(()=>{
+   gsap.from("#para",{
+    y: -100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.3,
+    scrollTrigger:{
+      trigger:"#para",
+      scroll:'body',
+      scrub:2,
+      start:'top 50%',
+      end:'top 30%' 
+
+ }})
+})
   return (
     <div id='projects'>
-      <h1>2 Months Industry Experience Projects</h1>
+      <h1 id='para'>Industry Experience Projects</h1>
       <div className='slider'>
         <Card
           title="Tasklyst"
@@ -17,7 +36,7 @@ function Projects() {
         <Card
           title="SKILLBRIDGE"
           description="SkillBridge uses artificial intelligence to tailor learning experiences, optimize study plans, and empower users to achieve their goals faster."
-          liveLink="https://skillbridge.live"
+          liveLink="#"
           githubLink="https://github.com/flyingvaibhav/SkillBridge"
           variant="project"
         />

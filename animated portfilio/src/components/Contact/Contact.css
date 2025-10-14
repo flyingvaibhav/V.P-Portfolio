@@ -3,6 +3,7 @@
   height: 100%;
 
     display: flex;
+    overflow: hidden;
 
 
 }
@@ -105,6 +106,93 @@ form input{
     width: 100%;
   
   }
+  
+  .contact-social-links {
+    margin-top: 30px;
+  }
+  
+  .contact-social-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-social-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+/* Contact Social Links Styles */
+.contact-social-links {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact-social-links h3 {
+  color: rgb(8, 255, 234);
+  font-size: 24px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, rgb(8, 255, 234), white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.contact-social-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-social-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.contact-social-btn.linkedin {
+  background: linear-gradient(45deg, #0077b5, #00a0dc);
+  color: white;
+  border-color: #0077b5;
+}
+
+.contact-social-btn.linkedin:hover {
+  background: transparent;
+  color: #0077b5;
+  border-color: #0077b5;
+  box-shadow: 0 0 15px rgba(0, 119, 181, 0.3);
+}
+
+.contact-social-btn.github {
+  background: linear-gradient(45deg, #333, #555);
+  color: white;
+  border-color: #333;
+}
+
+.contact-social-btn.github:hover {
+  background: transparent;
+  color: #555;
+  border-color: #555;
+  box-shadow: 0 0 15px rgba(85, 85, 85, 0.3);
+}
+
+.contact-social-btn svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.contact-social-btn:hover svg {
+  transform: scale(1.1);
 }
 
 

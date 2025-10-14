@@ -1,7 +1,8 @@
 #home{
     width: 100%;
     height: 100%;
-    display: flex;   
+    display: flex; 
+    overflow: hidden;  
 }
 .lefthome{
     width: 50%;
@@ -56,7 +57,69 @@
 .homedetails button:hover{
     background-color: transparent;
     color: rgb(222, 51, 21);
-    }
+}
+
+/* Social Links Styles */
+.button-container {
+    margin-top: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.linkedin-btn {
+    background: linear-gradient(45deg, #0077b5, #00a0dc);
+    color: white;
+    border-color: #0077b5;
+}
+
+.linkedin-btn:hover {
+    background: transparent;
+    color: #0077b5;
+    border-color: #0077b5;
+    box-shadow: 0 0 15px rgba(0, 119, 181, 0.3);
+}
+
+.github-btn {
+    background: linear-gradient(45deg, #333, #555);
+    color: white;
+    border-color: #333;
+}
+
+.github-btn:hover {
+    background: transparent;
+    color: #333;
+    border-color: #333;
+    box-shadow: 0 0 15px rgba(51, 51, 51, 0.3);
+}
+
+.social-btn svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-btn:hover svg {
+    transform: scale(1.1);
+}
 
 @media  (max-width: 768px){
     #home{
@@ -73,6 +136,22 @@
         height: 50%;
         padding-top: 25px;
         align-items: end;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .social-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+    
+    .social-btn svg {
+        width: 18px;
+        height: 18px;
     }
 
 }
