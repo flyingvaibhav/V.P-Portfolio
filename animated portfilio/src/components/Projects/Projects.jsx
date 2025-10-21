@@ -35,7 +35,7 @@ function Projects() {
         />
         <Card
           title="SKILLBRIDGE"
-          description="SkillBridge uses artificial intelligence to tailor learning experiences, optimize study plans, and empower users to achieve their goals faster."
+          description="SkillBridge uses artificial intelligence to tailor learning experiences, optimize study plans, and empower users to achieve their goals faster.THIS PROJECT IS STILL IN DEVELOPMENT PHASE" 
           liveLink="#"
           githubLink="https://github.com/flyingvaibhav/SkillBridge"
           variant="project"
