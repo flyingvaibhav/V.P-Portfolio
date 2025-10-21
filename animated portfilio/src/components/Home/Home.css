@@ -62,6 +62,8 @@
 /* Social Links Styles */
 .button-container {
     margin-top: 20px;
+
+
 }
 
 .social-links {
@@ -148,6 +150,13 @@
         font-size: 14px;
         padding: 10px 16px;
     }
+    .button-container {
+    margin-top: 20px;
+    text-align: center;
+
+
+
+}
     
     .social-btn svg {
         width: 18px;
