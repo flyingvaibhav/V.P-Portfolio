@@ -6,7 +6,7 @@ A modern, animated developer portfolio built with **React**, **Tailwind CSS**, a
 
 ## 🚀 Live Demo
 
-[View Portfolio Live](https://your-live-link.com) 
+[View Portfolio Live](https://vaibhavpportfolio.netlify.app/)
 
 ---
 
